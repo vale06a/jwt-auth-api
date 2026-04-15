@@ -7,8 +7,9 @@ app.use(express.json())
 
 app.use('/api/auth', authRoutes)
 
-app.listen(config.port, () => {
-  console.log(`Servidor corriendo en puerto ${config.port}`)
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en puerto ${PORT}`)
 })
 
 export default app
